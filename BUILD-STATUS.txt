@@ -1,0 +1,125 @@
+sprayfoamvr.com — BUILD STATUS
+Generated: 2026-08-20
+Builder: josh-desk-3@mesh
+
+DOMAIN CLASSIFICATION & PRE-BUILD SAFETY CHECK
+Educational/thought-leadership content site (NOT insurance, NOT a sales page for a product that
+exists — zero insurance language anywhere on the site). Pre-scaffold real-business-name check
+(dispatched to a research subagent, web search): confirmed NO real business, product, or brand
+currently operates under "SprayFoamVR," "Spray Foam VR," or the domain itself — only generic
+unrelated hits. Confirmed real, sourced adjacent-trade precedent: Owens Corning roofing division +
+PIXO VR deliver VR training via Owens Corning University on Pico 4 Ultra Enterprise headsets — a
+genuine, documented, currently operating program, in roofing, NOT spray foam. No spray-foam-specific
+VR training or sales-visualization vendor exists today; near-zero real search demand for "spray foam
+VR" terms confirmed. GO decision: built as CCA's own honest thought-leadership piece on where VR
+could realistically go in this trade (safety/application training for installers, sales
+visualization for homeowners) — explicitly NOT framed as an existing product, same pattern as the
+sibling roofmetaverse.com build. Sibling batch context: roofmetaverse.com covers drone/3D/digital-
+twin/AR/VR in roofing; sprayfoamscience.com covers building science. This domain's lane: VR
+specifically, spray foam specifically.
+
+ROUTES: 24 static routes generated (next build output, confirmed via `pnpm run build`)
+  - / (home)
+  - /about
+  - /topics (index) + 6 topic pages:
+      vr-safety-training-for-spray-foam-installers, vr-sales-visualization-tools,
+      why-spf-application-is-a-natural-fit-for-vr, the-technology-behind-vr-jobsite-training,
+      vr-training-vs-traditional-hands-on-training, the-future-of-vr-in-the-spray-foam-industry
+  - /blog (index) + 5 posts:
+      owens-corning-pixo-vr-roofing-precedent, isocyanate-exposure-safety-case-for-simulation-training,
+      how-3d-cutaway-visualization-helps-homeowners, vr-headset-hardware-landscape-2026,
+      why-no-one-has-built-spray-foam-vr-yet
+  - /contact
+  - /get-updates (soft-conversion primary CTA — a notification-list signup, NOT "Find an Installer"
+    or "Get a Quote," since no product exists yet to sell; framing verified honest throughout)
+  - /privacy, /terms
+  - /sitemap.xml, /robots.txt, /_not-found
+
+WORD COUNT (real counts, verified via `wc -w`, not estimated): topic-content.ts data file totals
+~4,477 words across 6 topics in the body-content string literals alone (~746 words average; rendered
+pages add page-chrome text — headings, key-takeaways list, FAQ — on top, comparable to the sibling
+sprayfoamscience.com build). Blog posts, individually verified: owens-corning-pixo-vr-roofing-
+precedent 568, why-no-one-has-built-spray-foam-vr-yet 595, how-3d-cutaway-visualization-helps-
+homeowners 548, vr-headset-hardware-landscape-2026 549, isocyanate-exposure-safety-case-for-
+simulation-training 538 (2,798 total). Runs somewhat under the 700-1,100/page brief target on
+individual pages, same honest flag as the sibling build — content is dense, sourced, and accurate
+throughout, not padded to hit a number. Every "real precedent" claim (Owens Corning/PIXO VR, Pico 4
+Ultra Enterprise hardware) is sourced and repeatable; every "doesn't exist yet" claim is stated
+plainly rather than implied around.
+
+HOMEPAGE: 9 sections — Hero(full-bleed VR-headset-on-jobsite photo, scrim >=50% opacity, trust bar)
++ TopicsGrid(6 cards) + WhyThisMatters + ProcessSteps + Stats(inverted dark-umber band, includes an
+honest "0 spray-foam-specific VR products exist today" stat) + TrustSignals + FAQ(6 Q&A) +
+CTA(photo band) + Footer.
+
+IMAGE COUNT: 9 generated (Gemini gemini-2.5-flash-image, first attempt, no HF fallback needed) +
+optimized. Total public/images/ = 1.2MB, largest file 166KB (topic-future-adoption.jpg). Filenames:
+hero-vr-training.jpg, topic-safety-training.jpg, topic-sales-visualization.jpg,
+topic-application-skill.jpg, topic-headset-tech.jpg, hero-application-still.jpg,
+topic-future-adoption.jpg, about-credibility.jpg, cta-band.jpg. Realistic photography style, matte-
+black/charcoal VR hardware with warm ambient lighting — no glowing tech-blue HUD cliches, no
+purple/pink/blue tint anywhere, no cartoons, no emoji, no fabricated logos. Image generation was
+dispatched to a scoped background subagent restricted to writing ONLY public/images/ (no build/
+scaffold/git files) to avoid the fork-scope-drift collision that hit two earlier builds tonight;
+verified via `find -newer` in that subagent's own report that it touched nothing else.
+
+STITCH COVERAGE: 3 real AI-generated screens (home, VR Safety Training topic-detail template,
+Get Updates) — zero quota issues, no hand-authored fallback needed. Stitch project
+projects/11005734955126124430, design system assets/5760153250623980172. Verified via
+`ls .stitch-pages/*.html` (3 files present, all real generate_screen_from_text responses parsed
+correctly per the skill's #1 rule — response body, not list_screens). Used the corrected wrapper
+path (/workspace/scripts/stitch-mcp-safe.sh -> /skills/stitch/stitch-mcp.sh) after confirming the
+skill's documented /mnt/shared-skills path does not exist on this container. Palette locked from the
+Stitch design system and applied via Tailwind CSS vars: primary amber-bronze #A67F30, secondary deep
+bronze #72522F, accent warm gold #D1AF47, dark inverted-band deep umber #4A2F1C, sage green #4E654E
+— all verified warm-earth hues, zero purple/pink/blue, deliberately distinct from sibling foam
+sites' rust (#A85A2E), copper (#A85D34), and cedar (#A8722E) primaries. Typography: Sora (headline,
+geometric tech-forward-but-warm) + Inter (body) — a distinct pairing from the other two sites in
+this batch (Space Grotesk+Source Serif4 on sprayfoamscience.com), chosen for a "modern but not
+neon-tech" feel appropriate to an emerging-tech topic without leaning into VR visual cliches.
+
+FORMS: contact (4-field: name/phone/email/message) + updates (5-field: name/phone/email/role
+dropdown/notes) — Netlify static pattern (data-netlify, honeypot, POST to /__forms.html), AEO
+traffic_source+landing_url hidden fields in both forms and in public/__forms.html decoy.
+netlify.toml has both webhook notifications wired (tenant=josh, site=sprayfoamvr.com), no
+plugin-nextjs. The "updates" form (renamed from the template's "findinstaller" pattern) is
+intentionally an interest/notification signup, not an installer-match or quote request — honest to
+the fact that no product exists yet to quote or match against.
+
+GATE RESULT: pre-deploy-content-check.sh PASS (exit 0). First run FAILED — no standalone git repo
+existed yet in this folder, so `git rev-parse` walked up to the shared /workspace/Websites tree and
+found its unrelated jambot-agent-josh remote (a known crosswire-risk pattern per prior incidents).
+Fixed by `git init` standalone inside sprayfoamvr.com/ before the gate, per the site-build
+git-init-before-gate lesson — re-run passed clean: 12 own-keyword hits, remote correctly references
+the domain slug, no banned hues, no decaying scrim, 3 stitch screens across 10 routes.
+
+BUILD: pnpm build GREEN, 24 static routes, static export (output:'export'), next pinned 15.3.9,
+react/react-dom 19.2.0, pnpm-lock.yaml only (package-lock.json gitignored), pnpm-workspace.yaml
+correct from the start (packages: ["."], not []) + onlyBuiltDependencies sharp per pnpm 11
+requirements. tel: links = 7, no phone-modal pattern found. Placeholder sweep: zero matches (the
+only "placeholder" string hits are legitimate HTML form-input placeholder= hint attributes, not
+template-default leftovers). git tree clean (node_modules/.next/out/.pnpm-store not tracked,
+verified via git status --short after `git add -A`).
+
+CONTACT INFO: canonical only — 844-967-5247 / josh@contractorschoiceagency.com /
+12220 E Riggs Rd, Chandler, AZ 85249. No fabricated testimonials, star ratings, named client
+results, or invented statistics anywhere. Every "this is real" claim (Owens Corning/PIXO VR
+partnership, Pico 4 Ultra Enterprise hardware, isocyanate/MDI hazard chemistry) traces to
+well-documented, sourced fact; every "this doesn't exist yet" claim (spray-foam-specific VR
+training/visualization products, market demand) is stated as a limitation, not implied around or
+glossed over — this was the dispatcher's explicit hard requirement and was checked page-by-page
+before reporting done.
+
+KNOWN GAP (flagged, not blocking): this container has no GITHUB_TOKEN, no gh auth, and no write
+access to /mnt/agent-mesh/github-push-requests (only admin-review is mounted here). Could not create
+MCERQUA/sprayfoamvr.com on GitHub or push. All work is committed to a standalone local git repo
+(git init'd directly inside sprayfoamvr.com/, NOT the shared /workspace/Websites/.git) under
+josh-desk-3@mesh, remote set to origin pointing at MCERQUA/sprayfoamvr.com.git (unreachable from
+here) — needs host hand-off for repo creation + push, then Netlify hookup. Same known gap as the
+sprayfoamscience.com sibling build tonight.
+
+PROCESS NOTE: image generation was dispatched to a background subagent explicitly scoped to
+public/images/ only (per the dispatcher's explicit instruction, given two earlier builds tonight hit
+real fork-scope-drift collisions). Verified clean via the subagent's own `find -newer` check plus
+this thread's own `git status --short` review before commit — no unexpected files, no concurrent
+build/scaffold writes from that agent.
