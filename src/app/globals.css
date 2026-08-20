@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== DESIGN TOKENS — SprayFoamVR =====
+ * Palette locked to the Stitch design system — ai/research/design-system.md
+ * Amber-bronze + warm gold, distinct from the rust/copper/cedar palettes used on
+ * sibling foam sites this batch. Light, bright, tech-forward-but-warm — resists the
+ * neon/tech-blue VR cliche entirely. Light-dominant with dark punctuation bands.
+ */
+
+@layer base {
+:root {
+  --background: 38 52% 95%;           /* #FBF3E7 warm paper */
+  --foreground: 28 32% 13%;           /* #2C2015 charcoal-brown */
+
+  --card: 0 0% 100%;
+  --card-foreground: 28 32% 13%;
+
+  --primary: 40 55% 42%;              /* #A67F30 amber-bronze */
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 30 40% 32%;            /* #72522F deep bronze */
+  --secondary-foreground: 0 0% 100%;
+
+  --accent: 45 60% 55%;               /* #D1AF47 warm gold */
+  --accent-foreground: 28 32% 13%;
+
+  --sage: 95 24% 32%;                 /* #4E654E olive-sage green */
+  --sage-foreground: 0 0% 100%;
+
+  --muted: 38 44% 88%;                /* #EDE1CE warm sand */
+  --muted-foreground: 30 15% 38%;
+
+  --destructive: 0 74% 42%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 36 33% 83%;
+  --input: 36 33% 83%;
+  --ring: 40 55% 42%;
+
+  /* Inverted contrast band — dark punctuation band on this light-dominant site */
+  --ink: 25 45% 20%;                  /* #4A2F1C deep umber */
+  --ink-foreground: 40 40% 95%;
+
+  --radius: 0.75rem;                  /* ROUND_TWELVE per Stitch design system */
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), system-ui, sans-serif;
+}
+} /* close @layer base */
+
+/* ===== ANIMATIONS ===== */
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ===== REDUCED MOTION ===== */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ===== SELECTION ===== */
+
+::selection {
+  background: hsl(var(--primary) / 0.25);
+  color: hsl(var(--foreground));
+}
+
+/* ===== SCROLLBAR ===== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.4);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.7);
+}
+
+/* ===== TOUCH TARGETS (WCAG 2.5.5 / 2.5.8) ===== */
+@layer base {
+  button,
+  [role="button"],
+  a.btn,
+  select,
+  textarea,
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="hidden"]),
+  .edge-tab {
+    min-height: 44px;
+  }
+
+  button.icon,
+  .btn-icon,
+  [data-icon-only] {
+    min-width: 44px;
+  }
+}
+
+/* ===== BLOG / TECHNICAL ARTICLE PROSE (no typography plugin — hand-styled, light theme) ===== */
+.post-prose {
+  color: hsl(var(--foreground) / 0.85);
+  line-height: 1.75;
+}
+.post-prose h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: hsl(var(--foreground));
+}
+.post-prose h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: hsl(var(--foreground));
+}
+.post-prose p {
+  margin-bottom: 1.25rem;
+}
+.post-prose ul, .post-prose ol {
+  margin: 0 0 1.25rem 1.5rem;
+}
+.post-prose li {
+  margin-bottom: 0.5rem;
+}
+.post-prose ul { list-style: disc; }
+.post-prose ol { list-style: decimal; }
+.post-prose a {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.post-prose strong {
+  color: hsl(var(--foreground));
+  font-weight: 600;
+}
+.post-prose blockquote {
+  border-left: 3px solid hsl(var(--primary) / 0.5);
+  padding-left: 1.25rem;
+  font-style: italic;
+  color: hsl(var(--muted-foreground));
+  margin: 1.5rem 0;
+}

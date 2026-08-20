@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Get Updates | SprayFoamVR</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Public+Sans:wght@400;500;600&amp;family=Sora:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#A67F30',
+                            dark: '#72522F',
+                            light: '#D1AF47'
+                        },
+                        secondary: {
+                            DEFAULT: '#72522F'
+                        },
+                        accent: {
+                            DEFAULT: '#D1AF47',
+                            green: '#4E654E'
+                        },
+                        background: {
+                            DEFAULT: '#FBF3E7',
+                            card: '#FFFFFF',
+                            inverted: '#4A2F1C',
+                            darkest: '#2C2015'
+                        },
+                        text: {
+                            DEFAULT: '#2C2015',
+                            light: '#FBF3E7',
+                            muted: '#72522F'
+                        }
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem", // 12px for rounded-lg
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Sora", "sans-serif"],
+                        "display": ["Sora", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Public Sans", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-text antialiased">
+<!-- TopNavBar Component -->
+<nav class="bg-[#FBF3E7] dark:bg-[#2C2015] w-full top-0 sticky z-50 border-b border-[#72522F]/10 shadow-sm transition-all duration-200 ease-in-out">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto w-full">
+<div class="text-xl font-headline font-bold text-[#2C2015] dark:text-[#FBF3E7]">
+                SprayFoamVR
+            </div>
+<div class="hidden md:flex space-x-8">
+<a class="font-body text-body font-normal text-[#2C2015] dark:text-[#FBF3E7] hover:text-[#A67F30] transition-colors hover:opacity-80 transition-opacity" href="#">Home</a>
+<a class="font-body text-body font-normal text-[#2C2015] dark:text-[#FBF3E7] hover:text-[#A67F30] transition-colors hover:opacity-80 transition-opacity" href="#">About</a>
+<a class="font-body text-body font-normal text-[#2C2015] dark:text-[#FBF3E7] hover:text-[#A67F30] transition-colors hover:opacity-80 transition-opacity" href="#">Topics</a>
+<a class="font-body text-body font-normal text-[#2C2015] dark:text-[#FBF3E7] hover:text-[#A67F30] transition-colors hover:opacity-80 transition-opacity" href="#">Blog</a>
+<a class="font-body text-body font-normal text-[#2C2015] dark:text-[#FBF3E7] hover:text-[#A67F30] transition-colors hover:opacity-80 transition-opacity" href="#">Contact</a>
+</div>
+<div>
+<a class="inline-flex items-center justify-center px-6 py-2.5 bg-primary text-text-light font-label font-semibold rounded-lg hover:bg-primary-dark transition-colors duration-200" href="#">
+                    Get Updates
+                </a>
+</div>
+</div>
+</nav>
+<!-- Hero/Trust Section -->
+<section class="bg-background pt-20 pb-16 px-6 lg:px-8">
+<div class="max-w-4xl mx-auto text-center">
+<p class="font-label font-bold text-sm tracking-widest text-primary mb-4 uppercase">FREE, NO-OBLIGATION UPDATES</p>
+<h1 class="font-headline text-4xl md:text-5xl lg:text-6xl font-bold text-text mb-6 leading-tight">Stay Ahead of the Curve</h1>
+<p class="font-body text-lg text-text-muted mb-12 max-w-2xl mx-auto leading-relaxed">
+                Join our notification list for the latest insights on VR in the spray foam industry. We're sharing honest, grounded research on training and visualization tools currently in development. This is not a sales funnel—we respect your inbox.
+            </p>
+<!-- Trust Bar -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 py-8 border-y border-secondary/10">
+<div class="flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="factory">factory</span>
+<span class="font-label font-semibold text-sm text-text">Industry Focused</span>
+</div>
+<div class="flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="shield_lock">shield_lock</span>
+<span class="font-label font-semibold text-sm text-text">Zero Pressure</span>
+</div>
+<div class="flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="schedule">schedule</span>
+<span class="font-label font-semibold text-sm text-text">Early Access</span>
+</div>
+<div class="flex flex-col items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="block">block</span>
+<span class="font-label font-semibold text-sm text-text">No Spam</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content (Two Columns) -->
+<section class="bg-background-card py-20 px-6 lg:px-8">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+<!-- Left Column: What Happens Next -->
+<div class="flex flex-col justify-center">
+<h2 class="font-headline text-3xl font-bold text-text mb-8">What Happens Next</h2>
+<div class="space-y-10">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-background flex items-center justify-center border border-primary/20">
+<span class="font-headline font-bold text-primary text-xl">1</span>
+</div>
+<div>
+<h3 class="font-headline font-semibold text-xl text-text mb-2">Sign Up</h3>
+<p class="font-body text-text-muted leading-relaxed">Provide your details to join our exclusive list. We ask for your role to ensure we only send you the most relevant, tailored updates.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-background flex items-center justify-center border border-primary/20">
+<span class="font-headline font-bold text-primary text-xl">2</span>
+</div>
+<div>
+<h3 class="font-headline font-semibold text-xl text-text mb-2">Expert Curation</h3>
+<p class="font-body text-text-muted leading-relaxed">We sift through the noise. You'll receive concise, deeply researched thought-leadership pieces on how VR is practically shaping applicator training and homeowner visualization.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-background flex items-center justify-center border border-primary/20">
+<span class="font-headline font-bold text-primary text-xl">3</span>
+</div>
+<div>
+<h3 class="font-headline font-semibold text-xl text-text mb-2">Future Launch Notifications</h3>
+<p class="font-body text-text-muted leading-relaxed">When pilot programs or actual VR tools for the spray foam sector become available for beta testing or deployment, you will be the first to know.</p>
+</div>
+</div>
+</div>
+<!-- Decorative Image Placeholder -->
+<div class="mt-12 rounded-lg overflow-hidden border border-secondary/10 shadow-sm relative h-64">
+<img class="object-cover w-full h-full absolute inset-0" data-alt="A detailed, realistic photograph of a matte black virtual reality headset resting on a set of architectural blueprints on a warm oak wooden desk. The lighting is warm and natural, casting soft shadows. The aesthetic is grounded, professional, and industrial, conveying serious training and visualization tools for the construction and insulation industry. No glowing neon lights or sci-fi elements; strict adherence to a warm earth-toned palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKbyBwkZEpPnEt_rON0Id6QF3k6iVoQ6WFQcXkocsk2pvjxzEK_pxuVYwm_GQVZa_Nc-gNep6BciswZLglK7vFqINlffXbwkLGWdUDua7t2DVNkEWpCmgu-x-L9Fjhgo8ZjYjkLkDl5mzPhyJvQcwhJB2niQBWfblcWXfT3vONE-2t7CXnXME23cB11QIUYWeR39500z2W0FQPvppV5-vrfXdaDRVlFIBzF-THDzYS9xjNGn7Or7qNBUA0cC86dyMYCIzRKaueyDWk"/>
+</div>
+</div>
+<!-- Right Column: Signup Form Card -->
+<div>
+<div class="bg-background rounded-lg p-8 md:p-10 shadow-sm border border-secondary/10 relative overflow-hidden">
+<!-- Subtle background element -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+<h3 class="font-headline text-2xl font-bold text-text mb-6 relative z-10">Join the List</h3>
+<form class="space-y-6 relative z-10" onsubmit="event.preventDefault();">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label text-sm font-semibold text-text mb-2" for="firstName">First Name</label>
+<input class="w-full rounded-lg border-secondary/20 bg-background-card py-3 px-4 text-text focus:border-primary focus:ring-primary font-body" id="firstName" placeholder="John" type="text"/>
+</div>
+<div>
+<label class="block font-label text-sm font-semibold text-text mb-2" for="lastName">Last Name</label>
+<input class="w-full rounded-lg border-secondary/20 bg-background-card py-3 px-4 text-text focus:border-primary focus:ring-primary font-body" id="lastName" placeholder="Doe" type="text"/>
+</div>
+</div>
+<div>
+<label class="block font-label text-sm font-semibold text-text mb-2" for="email">Email Address</label>
+<input class="w-full rounded-lg border-secondary/20 bg-background-card py-3 px-4 text-text focus:border-primary focus:ring-primary font-body" id="email" placeholder="john@example.com" type="email"/>
+</div>
+<div>
+<label class="block font-label text-sm font-semibold text-text mb-2" for="phone">Phone Number <span class="text-text-muted font-normal text-xs">(Optional)</span></label>
+<input class="w-full rounded-lg border-secondary/20 bg-background-card py-3 px-4 text-text focus:border-primary focus:ring-primary font-body" id="phone" placeholder="(555) 123-4567" type="tel"/>
+</div>
+<div>
+<label class="block font-label text-sm font-semibold text-text mb-2" for="role">Which Best Describes You?</label>
+<select class="w-full rounded-lg border-secondary/20 bg-background-card py-3 px-4 text-text focus:border-primary focus:ring-primary font-body" id="role">
+<option disabled="" selected="" value="">Select an option...</option>
+<option value="contractor">Spray Foam Contractor / Installer</option>
+<option value="sales">Sales &amp; Estimation</option>
+<option value="training">Training &amp; Safety Director</option>
+<option value="manufacturer">Equipment Manufacturer</option>
+<option value="other">Other Industry Professional</option>
+</select>
+</div>
+<div>
+<label class="block font-label text-sm font-semibold text-text mb-2" for="notes">Notes <span class="text-text-muted font-normal text-xs">(Optional)</span></label>
+<textarea class="w-full rounded-lg border-secondary/20 bg-background-card py-3 px-4 text-text focus:border-primary focus:ring-primary font-body resize-none" id="notes" placeholder="Any specific topics you are interested in?" rows="3"></textarea>
+</div>
+<button class="w-full bg-primary hover:bg-primary-dark text-text-light font-headline font-bold text-lg py-4 rounded-lg transition-colors duration-200 shadow-sm mt-4" type="submit">
+                            Get Updates
+                        </button>
+</form>
+<div class="mt-8 pt-6 border-t border-secondary/10 text-center relative z-10">
+<p class="font-body text-sm text-text-muted">
+                            Prefer to talk? Call us at <a class="text-primary font-semibold hover:underline" href="tel:+18005550199">1-800-555-0199</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Component -->
+<footer class="bg-[#4A2F1C] dark:bg-[#2C2015] w-full border-t border-[#72522F]">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 w-full max-w-7xl mx-auto">
+<div class="text-lg font-headline font-bold text-[#D1AF47] mb-6 md:mb-0">
+                SprayFoamVR
+            </div>
+<div class="flex flex-wrap justify-center gap-6 mb-6 md:mb-0">
+<a class="font-body text-label text-sm text-[#FBF3E7]/80 hover:text-[#D1AF47] transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="font-body text-label text-sm text-[#FBF3E7]/80 hover:text-[#D1AF47] transition-colors duration-200" href="#">Terms of Service</a>
+<a class="font-body text-label text-sm text-[#FBF3E7]/80 hover:text-[#D1AF47] transition-colors duration-200" href="#">Accessibility</a>
+<a class="font-body text-label text-sm text-[#FBF3E7]/80 hover:text-[#D1AF47] transition-colors duration-200" href="#">Sitemap</a>
+</div>
+<div class="font-body text-label text-sm text-[#FBF3E7]/60 text-center md:text-right">
+                © 2024 Contractors Choice Agency (CCA). All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>
